@@ -1,0 +1,8 @@
+:Auth:
+  :project_token: 5eee5709-7f49-435c-ab6e-9d379ec705bb
+  :customer_token: 1d747e85-40c3-4e2c-98ff-6af0ed1a721f
+:SAST:
+  :language: semgrep
+:SCA:
+  :language: others
+:Secret_Scan: true
