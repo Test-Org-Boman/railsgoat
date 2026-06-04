@@ -64,6 +64,19 @@ Railsgoat::Application.routes.draw do
     end
   end
 
+  resources :expenses, only: [:new, :create, :show] do
+    collection do
+      post :upload_xml
+    end
+  end
+  
+  resources :tickets, only: [:index, :show, :new, :create]
+
+  namespace :admin do
+    get 'analytics' => 'analytics#index'
+    post 'analytics/generate_pdf' => 'analytics#generate_pdf'
+  end
+  
   namespace :api, defaults: {format: "json"} do
     namespace :v1 do
       resources :users
